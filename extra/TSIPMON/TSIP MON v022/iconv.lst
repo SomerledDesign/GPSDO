@@ -1,0 +1,1241 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.0 #4309 (Jul 28 2006)
+                              4 ; This file generated Thu Jan 01 19:10:22 2009
+                              5 ;--------------------------------------------------------
+                              6 	.module iconv
+                              7 	.optsdcc -mmcs51 --model-small
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _SPIF
+                             13 	.globl _WCOL
+                             14 	.globl _MODF
+                             15 	.globl _RXOVRN
+                             16 	.globl _NSSMD1
+                             17 	.globl _NSSMD0
+                             18 	.globl _TXBMT
+                             19 	.globl _SPIEN
+                             20 	.globl _AD0EN
+                             21 	.globl _AD0TM
+                             22 	.globl _AD0INT
+                             23 	.globl _AD0BUSY
+                             24 	.globl _AD0WINT
+                             25 	.globl _AD0CM2
+                             26 	.globl _AD0CM1
+                             27 	.globl _AD0CM0
+                             28 	.globl _CF
+                             29 	.globl _CR
+                             30 	.globl _CCF2
+                             31 	.globl _CCF1
+                             32 	.globl _CCF0
+                             33 	.globl _CY
+                             34 	.globl _AC
+                             35 	.globl _F0
+                             36 	.globl _RS1
+                             37 	.globl _RS0
+                             38 	.globl _OV
+                             39 	.globl _F1
+                             40 	.globl _PARITY
+                             41 	.globl _TF2H
+                             42 	.globl _TF2
+                             43 	.globl _TF2L
+                             44 	.globl _TF2LEN
+                             45 	.globl _TF2CEN
+                             46 	.globl _T2SPLIT
+                             47 	.globl _TR2
+                             48 	.globl _T2XCLK
+                             49 	.globl _MASTER
+                             50 	.globl _TXMODE
+                             51 	.globl _STA
+                             52 	.globl _STO
+                             53 	.globl _ACKRQ
+                             54 	.globl _ARBLOST
+                             55 	.globl _ACK
+                             56 	.globl _SI
+                             57 	.globl _PSPI0
+                             58 	.globl _PT2
+                             59 	.globl _PS0
+                             60 	.globl _PS
+                             61 	.globl _PT1
+                             62 	.globl _PX1
+                             63 	.globl _PT0
+                             64 	.globl _PX0
+                             65 	.globl _EA
+                             66 	.globl _ESPI0
+                             67 	.globl _ET2
+                             68 	.globl _ES0
+                             69 	.globl _ES
+                             70 	.globl _ET1
+                             71 	.globl _EX1
+                             72 	.globl _ET0
+                             73 	.globl _EX0
+                             74 	.globl _P2_7
+                             75 	.globl _P2_6
+                             76 	.globl _P2_5
+                             77 	.globl _P2_4
+                             78 	.globl _P2_3
+                             79 	.globl _P2_2
+                             80 	.globl _P2_1
+                             81 	.globl _P2_0
+                             82 	.globl _S0MODE
+                             83 	.globl _SM0
+                             84 	.globl _MCE0
+                             85 	.globl _SM2
+                             86 	.globl _REN0
+                             87 	.globl _REN
+                             88 	.globl _TB80
+                             89 	.globl _TB8
+                             90 	.globl _RB80
+                             91 	.globl _RB8
+                             92 	.globl _TI0
+                             93 	.globl _TI
+                             94 	.globl _RI0
+                             95 	.globl _RI
+                             96 	.globl _P1_7
+                             97 	.globl _P1_6
+                             98 	.globl _P1_5
+                             99 	.globl _P1_4
+                            100 	.globl _P1_3
+                            101 	.globl _P1_2
+                            102 	.globl _P1_1
+                            103 	.globl _P1_0
+                            104 	.globl _TF1
+                            105 	.globl _TR1
+                            106 	.globl _TF0
+                            107 	.globl _TR0
+                            108 	.globl _IE1
+                            109 	.globl _IT1
+                            110 	.globl _IE0
+                            111 	.globl _IT0
+                            112 	.globl _P0_7
+                            113 	.globl _P0_6
+                            114 	.globl _P0_5
+                            115 	.globl _P0_4
+                            116 	.globl _P0_3
+                            117 	.globl _P0_2
+                            118 	.globl _P0_1
+                            119 	.globl _P0_0
+                            120 	.globl _PCA0CP2
+                            121 	.globl _PCA0CP1
+                            122 	.globl _PCA0CP0
+                            123 	.globl _PCA0
+                            124 	.globl _ADC0LT
+                            125 	.globl _ADC0GT
+                            126 	.globl _ADC0
+                            127 	.globl _IDA0
+                            128 	.globl _TMR3RL
+                            129 	.globl _TMR3
+                            130 	.globl _TMR2RL
+                            131 	.globl _RCAP2
+                            132 	.globl _TMR2
+                            133 	.globl _TMR1
+                            134 	.globl _TMR0
+                            135 	.globl _VDM0CN
+                            136 	.globl _PCA0CPH0
+                            137 	.globl _PCA0CPL0
+                            138 	.globl _PCA0H
+                            139 	.globl _PCA0L
+                            140 	.globl _SPI0CN
+                            141 	.globl _EIP1
+                            142 	.globl _P1MDIN
+                            143 	.globl _P1MODE
+                            144 	.globl _P0MDIN
+                            145 	.globl _P0MODE
+                            146 	.globl _B
+                            147 	.globl _RSTSRC
+                            148 	.globl _PCA0CPH2
+                            149 	.globl _PCA0CPL2
+                            150 	.globl _PCA0CPH1
+                            151 	.globl _PCA0CPL1
+                            152 	.globl _ADC0CN
+                            153 	.globl _EIE1
+                            154 	.globl _INT01CF
+                            155 	.globl _IT01CF
+                            156 	.globl _OSCLCN
+                            157 	.globl _XBR1
+                            158 	.globl _XBR0
+                            159 	.globl _ACC
+                            160 	.globl _PCA0CPM2
+                            161 	.globl _PCA0CPM1
+                            162 	.globl _PCA0CPM0
+                            163 	.globl _PCA0MD
+                            164 	.globl _PCA0CN
+                            165 	.globl _P1SKIP
+                            166 	.globl _P0SKIP
+                            167 	.globl _REF0CN
+                            168 	.globl _PSW
+                            169 	.globl _TMR2H
+                            170 	.globl _TH2
+                            171 	.globl _TMR2L
+                            172 	.globl _TL2
+                            173 	.globl _TMR2RLH
+                            174 	.globl _RCAP2H
+                            175 	.globl _TMR2RLL
+                            176 	.globl _RCAP2L
+                            177 	.globl _TMR2CN
+                            178 	.globl _T2CON
+                            179 	.globl _ADC0LTH
+                            180 	.globl _ADC0LTL
+                            181 	.globl _ADC0GTH
+                            182 	.globl _ADC0GTL
+                            183 	.globl _SMB0DAT
+                            184 	.globl _SMB0CF
+                            185 	.globl _SMB0CN
+                            186 	.globl _ADC0H
+                            187 	.globl _ADC0L
+                            188 	.globl _ADC0CF
+                            189 	.globl _AMX0P
+                            190 	.globl _AMX0N
+                            191 	.globl _IDA0CN
+                            192 	.globl _IP
+                            193 	.globl _FLKEY
+                            194 	.globl _FLSCL
+                            195 	.globl _OSCICL
+                            196 	.globl _OSCICN
+                            197 	.globl _OSCXCN
+                            198 	.globl __XPAGE
+                            199 	.globl _EMI0CN
+                            200 	.globl _CLKSEL
+                            201 	.globl _IE
+                            202 	.globl _P2MDOUT
+                            203 	.globl _P1MDOUT
+                            204 	.globl _P0MDOUT
+                            205 	.globl _SPI0DAT
+                            206 	.globl _SPI0CKR
+                            207 	.globl _SPI0CFG
+                            208 	.globl _P2
+                            209 	.globl _CPT0MX
+                            210 	.globl _CPT0MD
+                            211 	.globl _CPT0CN
+                            212 	.globl _SBUF0
+                            213 	.globl _SBUF
+                            214 	.globl _SCON0
+                            215 	.globl _SCON
+                            216 	.globl _IDA0H
+                            217 	.globl _IDA0L
+                            218 	.globl _TMR3H
+                            219 	.globl _TMR3L
+                            220 	.globl _TMR3RLH
+                            221 	.globl _TMR3RLL
+                            222 	.globl _TMR3CN
+                            223 	.globl _P1
+                            224 	.globl _PSCTL
+                            225 	.globl _CKCON
+                            226 	.globl _TH1
+                            227 	.globl _TH0
+                            228 	.globl _TL1
+                            229 	.globl _TL0
+                            230 	.globl _TMOD
+                            231 	.globl _TCON
+                            232 	.globl _PCON
+                            233 	.globl _DPH
+                            234 	.globl _DPL
+                            235 	.globl _SP
+                            236 	.globl _P0
+                            237 	.globl _UnsignedToAscii_PARM_3
+                            238 	.globl _UnsignedToAscii_PARM_2
+                            239 	.globl _AsciiToUnsigned_PARM_2
+                            240 	.globl _AsciiToUnsigned
+                            241 	.globl _UnsignedToAscii
+                            242 ;--------------------------------------------------------
+                            243 ; special function registers
+                            244 ;--------------------------------------------------------
+                            245 	.area RSEG    (DATA)
+                    0080    246 G$P0$0$0 == 0x0080
+                    0080    247 _P0	=	0x0080
+                    0081    248 G$SP$0$0 == 0x0081
+                    0081    249 _SP	=	0x0081
+                    0082    250 G$DPL$0$0 == 0x0082
+                    0082    251 _DPL	=	0x0082
+                    0083    252 G$DPH$0$0 == 0x0083
+                    0083    253 _DPH	=	0x0083
+                    0087    254 G$PCON$0$0 == 0x0087
+                    0087    255 _PCON	=	0x0087
+                    0088    256 G$TCON$0$0 == 0x0088
+                    0088    257 _TCON	=	0x0088
+                    0089    258 G$TMOD$0$0 == 0x0089
+                    0089    259 _TMOD	=	0x0089
+                    008A    260 G$TL0$0$0 == 0x008a
+                    008A    261 _TL0	=	0x008a
+                    008B    262 G$TL1$0$0 == 0x008b
+                    008B    263 _TL1	=	0x008b
+                    008C    264 G$TH0$0$0 == 0x008c
+                    008C    265 _TH0	=	0x008c
+                    008D    266 G$TH1$0$0 == 0x008d
+                    008D    267 _TH1	=	0x008d
+                    008E    268 G$CKCON$0$0 == 0x008e
+                    008E    269 _CKCON	=	0x008e
+                    008F    270 G$PSCTL$0$0 == 0x008f
+                    008F    271 _PSCTL	=	0x008f
+                    0090    272 G$P1$0$0 == 0x0090
+                    0090    273 _P1	=	0x0090
+                    0091    274 G$TMR3CN$0$0 == 0x0091
+                    0091    275 _TMR3CN	=	0x0091
+                    0092    276 G$TMR3RLL$0$0 == 0x0092
+                    0092    277 _TMR3RLL	=	0x0092
+                    0093    278 G$TMR3RLH$0$0 == 0x0093
+                    0093    279 _TMR3RLH	=	0x0093
+                    0094    280 G$TMR3L$0$0 == 0x0094
+                    0094    281 _TMR3L	=	0x0094
+                    0095    282 G$TMR3H$0$0 == 0x0095
+                    0095    283 _TMR3H	=	0x0095
+                    0096    284 G$IDA0L$0$0 == 0x0096
+                    0096    285 _IDA0L	=	0x0096
+                    0097    286 G$IDA0H$0$0 == 0x0097
+                    0097    287 _IDA0H	=	0x0097
+                    0098    288 G$SCON$0$0 == 0x0098
+                    0098    289 _SCON	=	0x0098
+                    0098    290 G$SCON0$0$0 == 0x0098
+                    0098    291 _SCON0	=	0x0098
+                    0099    292 G$SBUF$0$0 == 0x0099
+                    0099    293 _SBUF	=	0x0099
+                    0099    294 G$SBUF0$0$0 == 0x0099
+                    0099    295 _SBUF0	=	0x0099
+                    009B    296 G$CPT0CN$0$0 == 0x009b
+                    009B    297 _CPT0CN	=	0x009b
+                    009D    298 G$CPT0MD$0$0 == 0x009d
+                    009D    299 _CPT0MD	=	0x009d
+                    009F    300 G$CPT0MX$0$0 == 0x009f
+                    009F    301 _CPT0MX	=	0x009f
+                    00A0    302 G$P2$0$0 == 0x00a0
+                    00A0    303 _P2	=	0x00a0
+                    00A1    304 G$SPI0CFG$0$0 == 0x00a1
+                    00A1    305 _SPI0CFG	=	0x00a1
+                    00A2    306 G$SPI0CKR$0$0 == 0x00a2
+                    00A2    307 _SPI0CKR	=	0x00a2
+                    00A3    308 G$SPI0DAT$0$0 == 0x00a3
+                    00A3    309 _SPI0DAT	=	0x00a3
+                    00A4    310 G$P0MDOUT$0$0 == 0x00a4
+                    00A4    311 _P0MDOUT	=	0x00a4
+                    00A5    312 G$P1MDOUT$0$0 == 0x00a5
+                    00A5    313 _P1MDOUT	=	0x00a5
+                    00A6    314 G$P2MDOUT$0$0 == 0x00a6
+                    00A6    315 _P2MDOUT	=	0x00a6
+                    00A8    316 G$IE$0$0 == 0x00a8
+                    00A8    317 _IE	=	0x00a8
+                    00A9    318 G$CLKSEL$0$0 == 0x00a9
+                    00A9    319 _CLKSEL	=	0x00a9
+                    00AA    320 G$EMI0CN$0$0 == 0x00aa
+                    00AA    321 _EMI0CN	=	0x00aa
+                    00AA    322 G$_XPAGE$0$0 == 0x00aa
+                    00AA    323 __XPAGE	=	0x00aa
+                    00B1    324 G$OSCXCN$0$0 == 0x00b1
+                    00B1    325 _OSCXCN	=	0x00b1
+                    00B2    326 G$OSCICN$0$0 == 0x00b2
+                    00B2    327 _OSCICN	=	0x00b2
+                    00B3    328 G$OSCICL$0$0 == 0x00b3
+                    00B3    329 _OSCICL	=	0x00b3
+                    00B6    330 G$FLSCL$0$0 == 0x00b6
+                    00B6    331 _FLSCL	=	0x00b6
+                    00B7    332 G$FLKEY$0$0 == 0x00b7
+                    00B7    333 _FLKEY	=	0x00b7
+                    00B8    334 G$IP$0$0 == 0x00b8
+                    00B8    335 _IP	=	0x00b8
+                    00B9    336 G$IDA0CN$0$0 == 0x00b9
+                    00B9    337 _IDA0CN	=	0x00b9
+                    00BA    338 G$AMX0N$0$0 == 0x00ba
+                    00BA    339 _AMX0N	=	0x00ba
+                    00BB    340 G$AMX0P$0$0 == 0x00bb
+                    00BB    341 _AMX0P	=	0x00bb
+                    00BC    342 G$ADC0CF$0$0 == 0x00bc
+                    00BC    343 _ADC0CF	=	0x00bc
+                    00BD    344 G$ADC0L$0$0 == 0x00bd
+                    00BD    345 _ADC0L	=	0x00bd
+                    00BE    346 G$ADC0H$0$0 == 0x00be
+                    00BE    347 _ADC0H	=	0x00be
+                    00C0    348 G$SMB0CN$0$0 == 0x00c0
+                    00C0    349 _SMB0CN	=	0x00c0
+                    00C1    350 G$SMB0CF$0$0 == 0x00c1
+                    00C1    351 _SMB0CF	=	0x00c1
+                    00C2    352 G$SMB0DAT$0$0 == 0x00c2
+                    00C2    353 _SMB0DAT	=	0x00c2
+                    00C3    354 G$ADC0GTL$0$0 == 0x00c3
+                    00C3    355 _ADC0GTL	=	0x00c3
+                    00C4    356 G$ADC0GTH$0$0 == 0x00c4
+                    00C4    357 _ADC0GTH	=	0x00c4
+                    00C5    358 G$ADC0LTL$0$0 == 0x00c5
+                    00C5    359 _ADC0LTL	=	0x00c5
+                    00C6    360 G$ADC0LTH$0$0 == 0x00c6
+                    00C6    361 _ADC0LTH	=	0x00c6
+                    00C8    362 G$T2CON$0$0 == 0x00c8
+                    00C8    363 _T2CON	=	0x00c8
+                    00C8    364 G$TMR2CN$0$0 == 0x00c8
+                    00C8    365 _TMR2CN	=	0x00c8
+                    00CA    366 G$RCAP2L$0$0 == 0x00ca
+                    00CA    367 _RCAP2L	=	0x00ca
+                    00CA    368 G$TMR2RLL$0$0 == 0x00ca
+                    00CA    369 _TMR2RLL	=	0x00ca
+                    00CB    370 G$RCAP2H$0$0 == 0x00cb
+                    00CB    371 _RCAP2H	=	0x00cb
+                    00CB    372 G$TMR2RLH$0$0 == 0x00cb
+                    00CB    373 _TMR2RLH	=	0x00cb
+                    00CC    374 G$TL2$0$0 == 0x00cc
+                    00CC    375 _TL2	=	0x00cc
+                    00CC    376 G$TMR2L$0$0 == 0x00cc
+                    00CC    377 _TMR2L	=	0x00cc
+                    00CD    378 G$TH2$0$0 == 0x00cd
+                    00CD    379 _TH2	=	0x00cd
+                    00CD    380 G$TMR2H$0$0 == 0x00cd
+                    00CD    381 _TMR2H	=	0x00cd
+                    00D0    382 G$PSW$0$0 == 0x00d0
+                    00D0    383 _PSW	=	0x00d0
+                    00D1    384 G$REF0CN$0$0 == 0x00d1
+                    00D1    385 _REF0CN	=	0x00d1
+                    00D4    386 G$P0SKIP$0$0 == 0x00d4
+                    00D4    387 _P0SKIP	=	0x00d4
+                    00D5    388 G$P1SKIP$0$0 == 0x00d5
+                    00D5    389 _P1SKIP	=	0x00d5
+                    00D8    390 G$PCA0CN$0$0 == 0x00d8
+                    00D8    391 _PCA0CN	=	0x00d8
+                    00D9    392 G$PCA0MD$0$0 == 0x00d9
+                    00D9    393 _PCA0MD	=	0x00d9
+                    00DA    394 G$PCA0CPM0$0$0 == 0x00da
+                    00DA    395 _PCA0CPM0	=	0x00da
+                    00DB    396 G$PCA0CPM1$0$0 == 0x00db
+                    00DB    397 _PCA0CPM1	=	0x00db
+                    00DC    398 G$PCA0CPM2$0$0 == 0x00dc
+                    00DC    399 _PCA0CPM2	=	0x00dc
+                    00E0    400 G$ACC$0$0 == 0x00e0
+                    00E0    401 _ACC	=	0x00e0
+                    00E1    402 G$XBR0$0$0 == 0x00e1
+                    00E1    403 _XBR0	=	0x00e1
+                    00E2    404 G$XBR1$0$0 == 0x00e2
+                    00E2    405 _XBR1	=	0x00e2
+                    00E3    406 G$OSCLCN$0$0 == 0x00e3
+                    00E3    407 _OSCLCN	=	0x00e3
+                    00E4    408 G$IT01CF$0$0 == 0x00e4
+                    00E4    409 _IT01CF	=	0x00e4
+                    00E4    410 G$INT01CF$0$0 == 0x00e4
+                    00E4    411 _INT01CF	=	0x00e4
+                    00E6    412 G$EIE1$0$0 == 0x00e6
+                    00E6    413 _EIE1	=	0x00e6
+                    00E8    414 G$ADC0CN$0$0 == 0x00e8
+                    00E8    415 _ADC0CN	=	0x00e8
+                    00E9    416 G$PCA0CPL1$0$0 == 0x00e9
+                    00E9    417 _PCA0CPL1	=	0x00e9
+                    00EA    418 G$PCA0CPH1$0$0 == 0x00ea
+                    00EA    419 _PCA0CPH1	=	0x00ea
+                    00EB    420 G$PCA0CPL2$0$0 == 0x00eb
+                    00EB    421 _PCA0CPL2	=	0x00eb
+                    00EC    422 G$PCA0CPH2$0$0 == 0x00ec
+                    00EC    423 _PCA0CPH2	=	0x00ec
+                    00EF    424 G$RSTSRC$0$0 == 0x00ef
+                    00EF    425 _RSTSRC	=	0x00ef
+                    00F0    426 G$B$0$0 == 0x00f0
+                    00F0    427 _B	=	0x00f0
+                    00F1    428 G$P0MODE$0$0 == 0x00f1
+                    00F1    429 _P0MODE	=	0x00f1
+                    00F1    430 G$P0MDIN$0$0 == 0x00f1
+                    00F1    431 _P0MDIN	=	0x00f1
+                    00F2    432 G$P1MODE$0$0 == 0x00f2
+                    00F2    433 _P1MODE	=	0x00f2
+                    00F2    434 G$P1MDIN$0$0 == 0x00f2
+                    00F2    435 _P1MDIN	=	0x00f2
+                    00F6    436 G$EIP1$0$0 == 0x00f6
+                    00F6    437 _EIP1	=	0x00f6
+                    00F8    438 G$SPI0CN$0$0 == 0x00f8
+                    00F8    439 _SPI0CN	=	0x00f8
+                    00F9    440 G$PCA0L$0$0 == 0x00f9
+                    00F9    441 _PCA0L	=	0x00f9
+                    00FA    442 G$PCA0H$0$0 == 0x00fa
+                    00FA    443 _PCA0H	=	0x00fa
+                    00FB    444 G$PCA0CPL0$0$0 == 0x00fb
+                    00FB    445 _PCA0CPL0	=	0x00fb
+                    00FC    446 G$PCA0CPH0$0$0 == 0x00fc
+                    00FC    447 _PCA0CPH0	=	0x00fc
+                    00FF    448 G$VDM0CN$0$0 == 0x00ff
+                    00FF    449 _VDM0CN	=	0x00ff
+                    8C8A    450 G$TMR0$0$0 == 0x8c8a
+                    8C8A    451 _TMR0	=	0x8c8a
+                    8D8B    452 G$TMR1$0$0 == 0x8d8b
+                    8D8B    453 _TMR1	=	0x8d8b
+                    CDCC    454 G$TMR2$0$0 == 0xcdcc
+                    CDCC    455 _TMR2	=	0xcdcc
+                    CBCA    456 G$RCAP2$0$0 == 0xcbca
+                    CBCA    457 _RCAP2	=	0xcbca
+                    CBCA    458 G$TMR2RL$0$0 == 0xcbca
+                    CBCA    459 _TMR2RL	=	0xcbca
+                    9594    460 G$TMR3$0$0 == 0x9594
+                    9594    461 _TMR3	=	0x9594
+                    9392    462 G$TMR3RL$0$0 == 0x9392
+                    9392    463 _TMR3RL	=	0x9392
+                    9796    464 G$IDA0$0$0 == 0x9796
+                    9796    465 _IDA0	=	0x9796
+                    BEBD    466 G$ADC0$0$0 == 0xbebd
+                    BEBD    467 _ADC0	=	0xbebd
+                    C4C3    468 G$ADC0GT$0$0 == 0xc4c3
+                    C4C3    469 _ADC0GT	=	0xc4c3
+                    C6C5    470 G$ADC0LT$0$0 == 0xc6c5
+                    C6C5    471 _ADC0LT	=	0xc6c5
+                    FAF9    472 G$PCA0$0$0 == 0xfaf9
+                    FAF9    473 _PCA0	=	0xfaf9
+                    FCFB    474 G$PCA0CP0$0$0 == 0xfcfb
+                    FCFB    475 _PCA0CP0	=	0xfcfb
+                    EAE9    476 G$PCA0CP1$0$0 == 0xeae9
+                    EAE9    477 _PCA0CP1	=	0xeae9
+                    ECEB    478 G$PCA0CP2$0$0 == 0xeceb
+                    ECEB    479 _PCA0CP2	=	0xeceb
+                            480 ;--------------------------------------------------------
+                            481 ; special function bits
+                            482 ;--------------------------------------------------------
+                            483 	.area RSEG    (DATA)
+                    0080    484 G$P0_0$0$0 == 0x0080
+                    0080    485 _P0_0	=	0x0080
+                    0081    486 G$P0_1$0$0 == 0x0081
+                    0081    487 _P0_1	=	0x0081
+                    0082    488 G$P0_2$0$0 == 0x0082
+                    0082    489 _P0_2	=	0x0082
+                    0083    490 G$P0_3$0$0 == 0x0083
+                    0083    491 _P0_3	=	0x0083
+                    0084    492 G$P0_4$0$0 == 0x0084
+                    0084    493 _P0_4	=	0x0084
+                    0085    494 G$P0_5$0$0 == 0x0085
+                    0085    495 _P0_5	=	0x0085
+                    0086    496 G$P0_6$0$0 == 0x0086
+                    0086    497 _P0_6	=	0x0086
+                    0087    498 G$P0_7$0$0 == 0x0087
+                    0087    499 _P0_7	=	0x0087
+                    0088    500 G$IT0$0$0 == 0x0088
+                    0088    501 _IT0	=	0x0088
+                    0089    502 G$IE0$0$0 == 0x0089
+                    0089    503 _IE0	=	0x0089
+                    008A    504 G$IT1$0$0 == 0x008a
+                    008A    505 _IT1	=	0x008a
+                    008B    506 G$IE1$0$0 == 0x008b
+                    008B    507 _IE1	=	0x008b
+                    008C    508 G$TR0$0$0 == 0x008c
+                    008C    509 _TR0	=	0x008c
+                    008D    510 G$TF0$0$0 == 0x008d
+                    008D    511 _TF0	=	0x008d
+                    008E    512 G$TR1$0$0 == 0x008e
+                    008E    513 _TR1	=	0x008e
+                    008F    514 G$TF1$0$0 == 0x008f
+                    008F    515 _TF1	=	0x008f
+                    0090    516 G$P1_0$0$0 == 0x0090
+                    0090    517 _P1_0	=	0x0090
+                    0091    518 G$P1_1$0$0 == 0x0091
+                    0091    519 _P1_1	=	0x0091
+                    0092    520 G$P1_2$0$0 == 0x0092
+                    0092    521 _P1_2	=	0x0092
+                    0093    522 G$P1_3$0$0 == 0x0093
+                    0093    523 _P1_3	=	0x0093
+                    0094    524 G$P1_4$0$0 == 0x0094
+                    0094    525 _P1_4	=	0x0094
+                    0095    526 G$P1_5$0$0 == 0x0095
+                    0095    527 _P1_5	=	0x0095
+                    0096    528 G$P1_6$0$0 == 0x0096
+                    0096    529 _P1_6	=	0x0096
+                    0097    530 G$P1_7$0$0 == 0x0097
+                    0097    531 _P1_7	=	0x0097
+                    0098    532 G$RI$0$0 == 0x0098
+                    0098    533 _RI	=	0x0098
+                    0098    534 G$RI0$0$0 == 0x0098
+                    0098    535 _RI0	=	0x0098
+                    0099    536 G$TI$0$0 == 0x0099
+                    0099    537 _TI	=	0x0099
+                    0099    538 G$TI0$0$0 == 0x0099
+                    0099    539 _TI0	=	0x0099
+                    009A    540 G$RB8$0$0 == 0x009a
+                    009A    541 _RB8	=	0x009a
+                    009A    542 G$RB80$0$0 == 0x009a
+                    009A    543 _RB80	=	0x009a
+                    009B    544 G$TB8$0$0 == 0x009b
+                    009B    545 _TB8	=	0x009b
+                    009B    546 G$TB80$0$0 == 0x009b
+                    009B    547 _TB80	=	0x009b
+                    009C    548 G$REN$0$0 == 0x009c
+                    009C    549 _REN	=	0x009c
+                    009C    550 G$REN0$0$0 == 0x009c
+                    009C    551 _REN0	=	0x009c
+                    009D    552 G$SM2$0$0 == 0x009d
+                    009D    553 _SM2	=	0x009d
+                    009D    554 G$MCE0$0$0 == 0x009d
+                    009D    555 _MCE0	=	0x009d
+                    009F    556 G$SM0$0$0 == 0x009f
+                    009F    557 _SM0	=	0x009f
+                    009F    558 G$S0MODE$0$0 == 0x009f
+                    009F    559 _S0MODE	=	0x009f
+                    00A0    560 G$P2_0$0$0 == 0x00a0
+                    00A0    561 _P2_0	=	0x00a0
+                    00A1    562 G$P2_1$0$0 == 0x00a1
+                    00A1    563 _P2_1	=	0x00a1
+                    00A2    564 G$P2_2$0$0 == 0x00a2
+                    00A2    565 _P2_2	=	0x00a2
+                    00A3    566 G$P2_3$0$0 == 0x00a3
+                    00A3    567 _P2_3	=	0x00a3
+                    00A4    568 G$P2_4$0$0 == 0x00a4
+                    00A4    569 _P2_4	=	0x00a4
+                    00A5    570 G$P2_5$0$0 == 0x00a5
+                    00A5    571 _P2_5	=	0x00a5
+                    00A6    572 G$P2_6$0$0 == 0x00a6
+                    00A6    573 _P2_6	=	0x00a6
+                    00A7    574 G$P2_7$0$0 == 0x00a7
+                    00A7    575 _P2_7	=	0x00a7
+                    00A8    576 G$EX0$0$0 == 0x00a8
+                    00A8    577 _EX0	=	0x00a8
+                    00A9    578 G$ET0$0$0 == 0x00a9
+                    00A9    579 _ET0	=	0x00a9
+                    00AA    580 G$EX1$0$0 == 0x00aa
+                    00AA    581 _EX1	=	0x00aa
+                    00AB    582 G$ET1$0$0 == 0x00ab
+                    00AB    583 _ET1	=	0x00ab
+                    00AC    584 G$ES$0$0 == 0x00ac
+                    00AC    585 _ES	=	0x00ac
+                    00AC    586 G$ES0$0$0 == 0x00ac
+                    00AC    587 _ES0	=	0x00ac
+                    00AD    588 G$ET2$0$0 == 0x00ad
+                    00AD    589 _ET2	=	0x00ad
+                    00AE    590 G$ESPI0$0$0 == 0x00ae
+                    00AE    591 _ESPI0	=	0x00ae
+                    00AF    592 G$EA$0$0 == 0x00af
+                    00AF    593 _EA	=	0x00af
+                    00B8    594 G$PX0$0$0 == 0x00b8
+                    00B8    595 _PX0	=	0x00b8
+                    00B9    596 G$PT0$0$0 == 0x00b9
+                    00B9    597 _PT0	=	0x00b9
+                    00BA    598 G$PX1$0$0 == 0x00ba
+                    00BA    599 _PX1	=	0x00ba
+                    00BB    600 G$PT1$0$0 == 0x00bb
+                    00BB    601 _PT1	=	0x00bb
+                    00BC    602 G$PS$0$0 == 0x00bc
+                    00BC    603 _PS	=	0x00bc
+                    00BC    604 G$PS0$0$0 == 0x00bc
+                    00BC    605 _PS0	=	0x00bc
+                    00BD    606 G$PT2$0$0 == 0x00bd
+                    00BD    607 _PT2	=	0x00bd
+                    00BE    608 G$PSPI0$0$0 == 0x00be
+                    00BE    609 _PSPI0	=	0x00be
+                    00C0    610 G$SI$0$0 == 0x00c0
+                    00C0    611 _SI	=	0x00c0
+                    00C1    612 G$ACK$0$0 == 0x00c1
+                    00C1    613 _ACK	=	0x00c1
+                    00C2    614 G$ARBLOST$0$0 == 0x00c2
+                    00C2    615 _ARBLOST	=	0x00c2
+                    00C3    616 G$ACKRQ$0$0 == 0x00c3
+                    00C3    617 _ACKRQ	=	0x00c3
+                    00C4    618 G$STO$0$0 == 0x00c4
+                    00C4    619 _STO	=	0x00c4
+                    00C5    620 G$STA$0$0 == 0x00c5
+                    00C5    621 _STA	=	0x00c5
+                    00C6    622 G$TXMODE$0$0 == 0x00c6
+                    00C6    623 _TXMODE	=	0x00c6
+                    00C7    624 G$MASTER$0$0 == 0x00c7
+                    00C7    625 _MASTER	=	0x00c7
+                    00C8    626 G$T2XCLK$0$0 == 0x00c8
+                    00C8    627 _T2XCLK	=	0x00c8
+                    00CA    628 G$TR2$0$0 == 0x00ca
+                    00CA    629 _TR2	=	0x00ca
+                    00CB    630 G$T2SPLIT$0$0 == 0x00cb
+                    00CB    631 _T2SPLIT	=	0x00cb
+                    00CD    632 G$TF2CEN$0$0 == 0x00cd
+                    00CD    633 _TF2CEN	=	0x00cd
+                    00CD    634 G$TF2LEN$0$0 == 0x00cd
+                    00CD    635 _TF2LEN	=	0x00cd
+                    00CE    636 G$TF2L$0$0 == 0x00ce
+                    00CE    637 _TF2L	=	0x00ce
+                    00CF    638 G$TF2$0$0 == 0x00cf
+                    00CF    639 _TF2	=	0x00cf
+                    00CF    640 G$TF2H$0$0 == 0x00cf
+                    00CF    641 _TF2H	=	0x00cf
+                    00D0    642 G$PARITY$0$0 == 0x00d0
+                    00D0    643 _PARITY	=	0x00d0
+                    00D1    644 G$F1$0$0 == 0x00d1
+                    00D1    645 _F1	=	0x00d1
+                    00D2    646 G$OV$0$0 == 0x00d2
+                    00D2    647 _OV	=	0x00d2
+                    00D3    648 G$RS0$0$0 == 0x00d3
+                    00D3    649 _RS0	=	0x00d3
+                    00D4    650 G$RS1$0$0 == 0x00d4
+                    00D4    651 _RS1	=	0x00d4
+                    00D5    652 G$F0$0$0 == 0x00d5
+                    00D5    653 _F0	=	0x00d5
+                    00D6    654 G$AC$0$0 == 0x00d6
+                    00D6    655 _AC	=	0x00d6
+                    00D7    656 G$CY$0$0 == 0x00d7
+                    00D7    657 _CY	=	0x00d7
+                    00D8    658 G$CCF0$0$0 == 0x00d8
+                    00D8    659 _CCF0	=	0x00d8
+                    00D9    660 G$CCF1$0$0 == 0x00d9
+                    00D9    661 _CCF1	=	0x00d9
+                    00DA    662 G$CCF2$0$0 == 0x00da
+                    00DA    663 _CCF2	=	0x00da
+                    00DE    664 G$CR$0$0 == 0x00de
+                    00DE    665 _CR	=	0x00de
+                    00DF    666 G$CF$0$0 == 0x00df
+                    00DF    667 _CF	=	0x00df
+                    00E8    668 G$AD0CM0$0$0 == 0x00e8
+                    00E8    669 _AD0CM0	=	0x00e8
+                    00E9    670 G$AD0CM1$0$0 == 0x00e9
+                    00E9    671 _AD0CM1	=	0x00e9
+                    00EA    672 G$AD0CM2$0$0 == 0x00ea
+                    00EA    673 _AD0CM2	=	0x00ea
+                    00EB    674 G$AD0WINT$0$0 == 0x00eb
+                    00EB    675 _AD0WINT	=	0x00eb
+                    00EC    676 G$AD0BUSY$0$0 == 0x00ec
+                    00EC    677 _AD0BUSY	=	0x00ec
+                    00ED    678 G$AD0INT$0$0 == 0x00ed
+                    00ED    679 _AD0INT	=	0x00ed
+                    00EE    680 G$AD0TM$0$0 == 0x00ee
+                    00EE    681 _AD0TM	=	0x00ee
+                    00EF    682 G$AD0EN$0$0 == 0x00ef
+                    00EF    683 _AD0EN	=	0x00ef
+                    00F8    684 G$SPIEN$0$0 == 0x00f8
+                    00F8    685 _SPIEN	=	0x00f8
+                    00F9    686 G$TXBMT$0$0 == 0x00f9
+                    00F9    687 _TXBMT	=	0x00f9
+                    00FA    688 G$NSSMD0$0$0 == 0x00fa
+                    00FA    689 _NSSMD0	=	0x00fa
+                    00FB    690 G$NSSMD1$0$0 == 0x00fb
+                    00FB    691 _NSSMD1	=	0x00fb
+                    00FC    692 G$RXOVRN$0$0 == 0x00fc
+                    00FC    693 _RXOVRN	=	0x00fc
+                    00FD    694 G$MODF$0$0 == 0x00fd
+                    00FD    695 _MODF	=	0x00fd
+                    00FE    696 G$WCOL$0$0 == 0x00fe
+                    00FE    697 _WCOL	=	0x00fe
+                    00FF    698 G$SPIF$0$0 == 0x00ff
+                    00FF    699 _SPIF	=	0x00ff
+                            700 ;--------------------------------------------------------
+                            701 ; overlayable register banks
+                            702 ;--------------------------------------------------------
+                            703 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                     704 	.ds 8
+                            705 ;--------------------------------------------------------
+                            706 ; internal ram data
+                            707 ;--------------------------------------------------------
+                            708 	.area DSEG    (DATA)
+                    0000    709 LAsciiToUnsigned$p_int$1$1==.
+   0000                     710 _AsciiToUnsigned_PARM_2:
+   0000                     711 	.ds 3
+                    0003    712 LUnsignedToAscii$pbuf$1$1==.
+   0003                     713 _UnsignedToAscii_PARM_2:
+   0003                     714 	.ds 2
+                    0005    715 LUnsignedToAscii$nbdigits$1$1==.
+   0005                     716 _UnsignedToAscii_PARM_3:
+   0005                     717 	.ds 1
+                            718 ;--------------------------------------------------------
+                            719 ; overlayable items in internal ram 
+                            720 ;--------------------------------------------------------
+                            721 	.area OSEG    (OVR,DATA)
+                            722 ;--------------------------------------------------------
+                            723 ; indirectly addressable internal ram data
+                            724 ;--------------------------------------------------------
+                            725 	.area ISEG    (DATA)
+                            726 ;--------------------------------------------------------
+                            727 ; bit data
+                            728 ;--------------------------------------------------------
+                            729 	.area BSEG    (BIT)
+                            730 ;--------------------------------------------------------
+                            731 ; paged external ram data
+                            732 ;--------------------------------------------------------
+                            733 	.area PSEG    (PAG,XDATA)
+                            734 ;--------------------------------------------------------
+                            735 ; external ram data
+                            736 ;--------------------------------------------------------
+                            737 	.area XSEG    (XDATA)
+                            738 ;--------------------------------------------------------
+                            739 ; external initialized ram data
+                            740 ;--------------------------------------------------------
+                            741 	.area XISEG   (XDATA)
+                            742 	.area HOME    (CODE)
+                            743 	.area GSINIT0 (CODE)
+                            744 	.area GSINIT1 (CODE)
+                            745 	.area GSINIT2 (CODE)
+                            746 	.area GSINIT3 (CODE)
+                            747 	.area GSINIT4 (CODE)
+                            748 	.area GSINIT5 (CODE)
+                            749 	.area GSINIT  (CODE)
+                            750 	.area GSFINAL (CODE)
+                            751 	.area CSEG    (CODE)
+                            752 ;--------------------------------------------------------
+                            753 ; global & static initialisations
+                            754 ;--------------------------------------------------------
+                            755 	.area HOME    (CODE)
+                            756 	.area GSINIT  (CODE)
+                            757 	.area GSFINAL (CODE)
+                            758 	.area GSINIT  (CODE)
+                            759 ;--------------------------------------------------------
+                            760 ; Home
+                            761 ;--------------------------------------------------------
+                            762 	.area HOME    (CODE)
+                            763 	.area CSEG    (CODE)
+                            764 ;--------------------------------------------------------
+                            765 ; code
+                            766 ;--------------------------------------------------------
+                            767 	.area CSEG    (CODE)
+                            768 ;------------------------------------------------------------
+                            769 ;Allocation info for local variables in function 'AsciiToUnsigned'
+                            770 ;------------------------------------------------------------
+                            771 ;p_int                     Allocated with name '_AsciiToUnsigned_PARM_2'
+                            772 ;p_ascii                   Allocated to registers r2 r3 
+                            773 ;i                         Allocated to registers r7 
+                            774 ;n                         Allocated to registers r4 
+                            775 ;value                     Allocated to registers r5 r6 
+                            776 ;------------------------------------------------------------
+                    0000    777 	G$AsciiToUnsigned$0$0 ==.
+                    0000    778 	C$iconv.c$61$0$0 ==.
+                            779 ;	C:/SDCC/GPSMon/dev/iconv.c:61: uchar AsciiToUnsigned( uchar TXRX_STORAGE_CLASS *p_ascii, 
+                            780 ;	-----------------------------------------
+                            781 ;	 function AsciiToUnsigned
+                            782 ;	-----------------------------------------
+   0000                     783 _AsciiToUnsigned:
+                    0002    784 	ar2 = 0x02
+                    0003    785 	ar3 = 0x03
+                    0004    786 	ar4 = 0x04
+                    0005    787 	ar5 = 0x05
+                    0006    788 	ar6 = 0x06
+                    0007    789 	ar7 = 0x07
+                    0000    790 	ar0 = 0x00
+                    0001    791 	ar1 = 0x01
+                            792 ;	genReceive
+   0000 AA 82               793 	mov	r2,dpl
+   0002 AB 83               794 	mov	r3,dph
+                    0004    795 	C$iconv.c$64$1$0 ==.
+                            796 ;	C:/SDCC/GPSMon/dev/iconv.c:64: uchar i = 0, n = 0;
+                            797 ;	genAssign
+   0004 7C 00               798 	mov	r4,#0x00
+                    0006    799 	C$iconv.c$65$1$0 ==.
+                            800 ;	C:/SDCC/GPSMon/dev/iconv.c:65: uint value = 0;
+                            801 ;	genAssign
+   0006 7D 00               802 	mov	r5,#0x00
+   0008 7E 00               803 	mov	r6,#0x00
+                    000A    804 	C$iconv.c$67$1$1 ==.
+                            805 ;	C:/SDCC/GPSMon/dev/iconv.c:67: while( (i < (MAX_A2B_DIGITS+1) ) && (n < MAX_A2B_DIGITS) ){
+                            806 ;	genAssign
+   000A 7F 00               807 	mov	r7,#0x00
+                            808 ;	genAssign
+   000C                     809 00110$:
+                            810 ;	genCmpLt
+                            811 ;	genCmp
+   000C BF 06 00            812 	cjne	r7,#0x06,00128$
+   000F                     813 00128$:
+                            814 ;	genIfxJump
+                            815 ;	Peephole 108.a	removed ljmp by inverse jump logic
+   000F 50 5F               816 	jnc	00112$
+                            817 ;	Peephole 300	removed redundant label 00129$
+                            818 ;	genCmpLt
+                            819 ;	genCmp
+   0011 BC 05 00            820 	cjne	r4,#0x05,00130$
+   0014                     821 00130$:
+                            822 ;	genIfxJump
+                            823 ;	Peephole 108.a	removed ljmp by inverse jump logic
+   0014 50 5A               824 	jnc	00112$
+                            825 ;	Peephole 300	removed redundant label 00131$
+                    0016    826 	C$iconv.c$68$2$2 ==.
+                            827 ;	C:/SDCC/GPSMon/dev/iconv.c:68: if( *p_ascii == '\0' )
+                            828 ;	genPointerGet
+                            829 ;	genFarPointerGet
+   0016 8A 82               830 	mov	dpl,r2
+   0018 8B 83               831 	mov	dph,r3
+   001A E0                  832 	movx	a,@dptr
+                            833 ;	genIfx
+   001B F8                  834 	mov	r0,a
+                            835 ;	Peephole 105	removed redundant mov
+                            836 ;	genIfxJump
+                            837 ;	Peephole 108.c	removed ljmp by inverse jump logic
+   001C 60 52               838 	jz	00112$
+                            839 ;	Peephole 300	removed redundant label 00132$
+                    001E    840 	C$iconv.c$71$2$2 ==.
+                            841 ;	C:/SDCC/GPSMon/dev/iconv.c:71: if( (*p_ascii < '0') || (*p_ascii > '9') ){
+                            842 ;	genCmpLt
+                            843 ;	genCmp
+   001E B8 30 00            844 	cjne	r0,#0x30,00133$
+   0021                     845 00133$:
+                            846 ;	genIfxJump
+                            847 ;	Peephole 112.b	changed ljmp to sjmp
+                            848 ;	Peephole 160.a	removed sjmp by inverse jump logic
+   0021 40 05               849 	jc	00105$
+                            850 ;	Peephole 300	removed redundant label 00134$
+                            851 ;	genCmpGt
+                            852 ;	genCmp
+                            853 ;	genIfxJump
+                            854 ;	Peephole 108.a	removed ljmp by inverse jump logic
+                            855 ;	Peephole 132.b	optimized genCmpGt by inverse logic (acc differs)
+   0023 E8                  856 	mov	a,r0
+   0024 24 C6               857 	add	a,#0xff - 0x39
+   0026 50 0F               858 	jnc	00106$
+                            859 ;	Peephole 300	removed redundant label 00135$
+   0028                     860 00105$:
+                    0028    861 	C$iconv.c$72$3$3 ==.
+                            862 ;	C:/SDCC/GPSMon/dev/iconv.c:72: if( *p_ascii != ' ' )
+                            863 ;	genPointerGet
+                            864 ;	genFarPointerGet
+   0028 8A 82               865 	mov	dpl,r2
+   002A 8B 83               866 	mov	dph,r3
+   002C E0                  867 	movx	a,@dptr
+   002D F9                  868 	mov	r1,a
+                            869 ;	genCmpEq
+                            870 ;	gencjneshort
+   002E B9 20 02            871 	cjne	r1,#0x20,00136$
+                            872 ;	Peephole 112.b	changed ljmp to sjmp
+   0031 80 35               873 	sjmp	00107$
+   0033                     874 00136$:
+                    0033    875 	C$iconv.c$73$3$3 ==.
+                            876 ;	C:/SDCC/GPSMon/dev/iconv.c:73: n = MAX_A2B_DIGITS;
+                            877 ;	genAssign
+   0033 7C 05               878 	mov	r4,#0x05
+                            879 ;	Peephole 112.b	changed ljmp to sjmp
+   0035 80 31               880 	sjmp	00107$
+   0037                     881 00106$:
+                    0037    882 	C$iconv.c$75$3$4 ==.
+                            883 ;	C:/SDCC/GPSMon/dev/iconv.c:75: n++;
+                            884 ;	genPlus
+                            885 ;     genPlusIncr
+   0037 0C                  886 	inc	r4
+                    0038    887 	C$iconv.c$76$1$1 ==.
+                            888 ;	C:/SDCC/GPSMon/dev/iconv.c:76: value *= 10;
+                            889 ;	genAssign
+   0038 75*00 0A            890 	mov	__mulint_PARM_2,#0x0A
+   003B E4                  891 	clr	a
+   003C F5*01               892 	mov	(__mulint_PARM_2 + 1),a
+                            893 ;	genCall
+   003E 8D 82               894 	mov	dpl,r5
+   0040 8E 83               895 	mov	dph,r6
+   0042 C0 02               896 	push	ar2
+   0044 C0 03               897 	push	ar3
+   0046 C0 04               898 	push	ar4
+   0048 C0 07               899 	push	ar7
+   004A C0 00               900 	push	ar0
+   004C 12s00r00            901 	lcall	__mulint
+   004F AD 82               902 	mov	r5,dpl
+   0051 AE 83               903 	mov	r6,dph
+   0053 D0 00               904 	pop	ar0
+   0055 D0 07               905 	pop	ar7
+   0057 D0 04               906 	pop	ar4
+   0059 D0 03               907 	pop	ar3
+   005B D0 02               908 	pop	ar2
+                    005D    909 	C$iconv.c$77$3$4 ==.
+                            910 ;	C:/SDCC/GPSMon/dev/iconv.c:77: value += ( *p_ascii & ASCII_MASK );
+                            911 ;	genAnd
+   005D 53 00 0F            912 	anl	ar0,#0x0F
+                            913 ;	genCast
+   0060 79 00               914 	mov	r1,#0x00
+                            915 ;	genPlus
+                            916 ;	Peephole 236.g	used r0 instead of ar0
+   0062 E8                  917 	mov	a,r0
+                            918 ;	Peephole 236.a	used r5 instead of ar5
+   0063 2D                  919 	add	a,r5
+   0064 FD                  920 	mov	r5,a
+                            921 ;	Peephole 236.g	used r1 instead of ar1
+   0065 E9                  922 	mov	a,r1
+                            923 ;	Peephole 236.b	used r6 instead of ar6
+   0066 3E                  924 	addc	a,r6
+   0067 FE                  925 	mov	r6,a
+   0068                     926 00107$:
+                    0068    927 	C$iconv.c$80$2$2 ==.
+                            928 ;	C:/SDCC/GPSMon/dev/iconv.c:80: i++;
+                            929 ;	genPlus
+                            930 ;     genPlusIncr
+   0068 0F                  931 	inc	r7
+                    0069    932 	C$iconv.c$81$2$2 ==.
+                            933 ;	C:/SDCC/GPSMon/dev/iconv.c:81: p_ascii++;
+                            934 ;	genPlus
+                            935 ;     genPlusIncr
+   0069 0A                  936 	inc	r2
+                            937 ;	Peephole 112.b	changed ljmp to sjmp
+                            938 ;	Peephole 243	avoided branch to sjmp
+   006A BA 00 9F            939 	cjne	r2,#0x00,00110$
+   006D 0B                  940 	inc	r3
+                            941 ;	Peephole 300	removed redundant label 00137$
+   006E 80 9C               942 	sjmp	00110$
+   0070                     943 00112$:
+                    0070    944 	C$iconv.c$84$1$1 ==.
+                            945 ;	C:/SDCC/GPSMon/dev/iconv.c:84: if( (*p_ascii == '\0') && (n > 0) ){
+                            946 ;	genPointerGet
+                            947 ;	genFarPointerGet
+   0070 8A 82               948 	mov	dpl,r2
+   0072 8B 83               949 	mov	dph,r3
+   0074 E0                  950 	movx	a,@dptr
+                            951 ;	genIfxJump
+                            952 ;	Peephole 108.b	removed ljmp by inverse jump logic
+   0075 70 1C               953 	jnz	00114$
+                            954 ;	Peephole 300	removed redundant label 00138$
+                            955 ;	genIfx
+   0077 EC                  956 	mov	a,r4
+                            957 ;	genIfxJump
+                            958 ;	Peephole 108.c	removed ljmp by inverse jump logic
+   0078 60 19               959 	jz	00114$
+                            960 ;	Peephole 300	removed redundant label 00139$
+                    007A    961 	C$iconv.c$85$2$5 ==.
+                            962 ;	C:/SDCC/GPSMon/dev/iconv.c:85: *p_int = value;
+                            963 ;	genAssign
+   007A AA*00               964 	mov	r2,_AsciiToUnsigned_PARM_2
+   007C AB*01               965 	mov	r3,(_AsciiToUnsigned_PARM_2 + 1)
+   007E AC*02               966 	mov	r4,(_AsciiToUnsigned_PARM_2 + 2)
+                            967 ;	genPointerSet
+                            968 ;	genGenPointerSet
+   0080 8A 82               969 	mov	dpl,r2
+   0082 8B 83               970 	mov	dph,r3
+   0084 8C F0               971 	mov	b,r4
+   0086 ED                  972 	mov	a,r5
+   0087 12s00r00            973 	lcall	__gptrput
+   008A A3                  974 	inc	dptr
+   008B EE                  975 	mov	a,r6
+   008C 12s00r00            976 	lcall	__gptrput
+                    008F    977 	C$iconv.c$86$2$5 ==.
+                            978 ;	C:/SDCC/GPSMon/dev/iconv.c:86: return( TRUE );
+                            979 ;	genRet
+   008F 75 82 01            980 	mov	dpl,#0x01
+                            981 ;	Peephole 112.b	changed ljmp to sjmp
+                    0092    982 	C$iconv.c$88$1$1 ==.
+                            983 ;	C:/SDCC/GPSMon/dev/iconv.c:88: return( FALSE );
+                            984 ;	genRet
+                    0092    985 	C$iconv.c$90$1$1 ==.
+                    0092    986 	XG$AsciiToUnsigned$0$0 ==.
+                            987 ;	Peephole 237.a	removed sjmp to ret
+   0092 22                  988 	ret
+   0093                     989 00114$:
+   0093 75 82 00            990 	mov	dpl,#0x00
+                            991 ;	Peephole 300	removed redundant label 00117$
+   0096 22                  992 	ret
+                            993 ;------------------------------------------------------------
+                            994 ;Allocation info for local variables in function 'UnsignedToAscii'
+                            995 ;------------------------------------------------------------
+                            996 ;pbuf                      Allocated with name '_UnsignedToAscii_PARM_2'
+                            997 ;nbdigits                  Allocated with name '_UnsignedToAscii_PARM_3'
+                            998 ;value                     Allocated to registers r2 r3 
+                            999 ;ndx                       Allocated to registers r5 
+                           1000 ;remainder                 Allocated to registers r1 r4 
+                           1001 ;result                    Allocated to registers r7 r0 
+                           1002 ;------------------------------------------------------------
+                    0097   1003 	G$UnsignedToAscii$0$0 ==.
+                    0097   1004 	C$iconv.c$99$1$1 ==.
+                           1005 ;	C:/SDCC/GPSMon/dev/iconv.c:99: void UnsignedToAscii( uint value, 
+                           1006 ;	-----------------------------------------
+                           1007 ;	 function UnsignedToAscii
+                           1008 ;	-----------------------------------------
+   0097                    1009 _UnsignedToAscii:
+                           1010 ;	genReceive
+   0097 AA 82              1011 	mov	r2,dpl
+   0099 AB 83              1012 	mov	r3,dph
+                    009B   1013 	C$iconv.c$106$1$1 ==.
+                           1014 ;	C:/SDCC/GPSMon/dev/iconv.c:106: ndx = nbdigits;
+                           1015 ;	genAssign
+                    009B   1016 	C$iconv.c$108$1$1 ==.
+                           1017 ;	C:/SDCC/GPSMon/dev/iconv.c:108: *(pbuf+ndx--) = '\0';
+                           1018 ;	genMinus
+                           1019 ;	genMinusDec
+   009B E5*05              1020 	mov	a,_UnsignedToAscii_PARM_3
+   009D 14                 1021 	dec	a
+   009E FD                 1022 	mov	r5,a
+                           1023 ;	genPlus
+   009F E5*05              1024 	mov	a,_UnsignedToAscii_PARM_3
+   00A1 25*03              1025 	add	a,_UnsignedToAscii_PARM_2
+   00A3 F5 82              1026 	mov	dpl,a
+                           1027 ;	Peephole 181	changed mov to clr
+   00A5 E4                 1028 	clr	a
+   00A6 35*04              1029 	addc	a,(_UnsignedToAscii_PARM_2 + 1)
+   00A8 F5 83              1030 	mov	dph,a
+                           1031 ;	genPointerSet
+                           1032 ;     genFarPointerSet
+                           1033 ;	Peephole 181	changed mov to clr
+   00AA E4                 1034 	clr	a
+   00AB F0                 1035 	movx	@dptr,a
+                           1036 ;	genAssign
+   00AC 8D 06              1037 	mov	ar6,r5
+   00AE                    1038 00103$:
+                    00AE   1039 	C$iconv.c$109$1$1 ==.
+                           1040 ;	C:/SDCC/GPSMon/dev/iconv.c:109: for( ; ndx>=0; ndx-- ){
+                           1041 ;	genCmpLt
+                           1042 ;	genCmp
+   00AE EE                 1043 	mov	a,r6
+                           1044 ;	genIfxJump
+                           1045 ;	Peephole 108.e	removed ljmp by inverse jump logic
+   00AF 20 E7 63           1046 	jb	acc.7,00106$
+                           1047 ;	Peephole 300	removed redundant label 00129$
+                    00B2   1048 	C$iconv.c$110$1$1 ==.
+                           1049 ;	C:/SDCC/GPSMon/dev/iconv.c:110: result = value / 10;
+                           1050 ;	genAssign
+   00B2 75*00 0A           1051 	mov	__divuint_PARM_2,#0x0A
+   00B5 E4                 1052 	clr	a
+   00B6 F5*01              1053 	mov	(__divuint_PARM_2 + 1),a
+                           1054 ;	genCall
+   00B8 8A 82              1055 	mov	dpl,r2
+   00BA 8B 83              1056 	mov	dph,r3
+   00BC C0 02              1057 	push	ar2
+   00BE C0 03              1058 	push	ar3
+   00C0 C0 06              1059 	push	ar6
+   00C2 12s00r00           1060 	lcall	__divuint
+   00C5 AF 82              1061 	mov	r7,dpl
+   00C7 A8 83              1062 	mov	r0,dph
+   00C9 D0 06              1063 	pop	ar6
+   00CB D0 03              1064 	pop	ar3
+   00CD D0 02              1065 	pop	ar2
+                    00CF   1066 	C$iconv.c$111$1$1 ==.
+                           1067 ;	C:/SDCC/GPSMon/dev/iconv.c:111: remainder = value - ( 10 * result );
+                           1068 ;	genAssign
+   00CF 75*00 0A           1069 	mov	__mulint_PARM_2,#0x0A
+   00D2 E4                 1070 	clr	a
+   00D3 F5*01              1071 	mov	(__mulint_PARM_2 + 1),a
+                           1072 ;	genCall
+   00D5 8F 82              1073 	mov	dpl,r7
+   00D7 88 83              1074 	mov	dph,r0
+   00D9 C0 02              1075 	push	ar2
+   00DB C0 03              1076 	push	ar3
+   00DD C0 06              1077 	push	ar6
+   00DF C0 07              1078 	push	ar7
+   00E1 C0 00              1079 	push	ar0
+   00E3 12s00r00           1080 	lcall	__mulint
+   00E6 A9 82              1081 	mov	r1,dpl
+   00E8 AC 83              1082 	mov	r4,dph
+   00EA D0 00              1083 	pop	ar0
+   00EC D0 07              1084 	pop	ar7
+   00EE D0 06              1085 	pop	ar6
+   00F0 D0 03              1086 	pop	ar3
+   00F2 D0 02              1087 	pop	ar2
+                           1088 ;	genMinus
+   00F4 EA                 1089 	mov	a,r2
+   00F5 C3                 1090 	clr	c
+                           1091 ;	Peephole 236.l	used r1 instead of ar1
+   00F6 99                 1092 	subb	a,r1
+   00F7 F9                 1093 	mov	r1,a
+   00F8 EB                 1094 	mov	a,r3
+                           1095 ;	Peephole 236.l	used r4 instead of ar4
+   00F9 9C                 1096 	subb	a,r4
+   00FA FC                 1097 	mov	r4,a
+                    00FB   1098 	C$iconv.c$112$2$2 ==.
+                           1099 ;	C:/SDCC/GPSMon/dev/iconv.c:112: value = result;
+                           1100 ;	genAssign
+   00FB 8F 02              1101 	mov	ar2,r7
+   00FD 88 03              1102 	mov	ar3,r0
+                    00FF   1103 	C$iconv.c$113$2$2 ==.
+                           1104 ;	C:/SDCC/GPSMon/dev/iconv.c:113: *(pbuf+ndx) = ( remainder | '0' );
+                           1105 ;	genPlus
+                           1106 ;	Peephole 236.g	used r6 instead of ar6
+   00FF EE                 1107 	mov	a,r6
+   0100 25*03              1108 	add	a,_UnsignedToAscii_PARM_2
+   0102 F5 82              1109 	mov	dpl,a
+                           1110 ;	Peephole 181	changed mov to clr
+   0104 E4                 1111 	clr	a
+   0105 35*04              1112 	addc	a,(_UnsignedToAscii_PARM_2 + 1)
+   0107 F5 83              1113 	mov	dph,a
+                           1114 ;	genOr
+   0109 43 01 30           1115 	orl	ar1,#0x30
+                           1116 ;	genCast
+                           1117 ;	genPointerSet
+                           1118 ;     genFarPointerSet
+   010C E9                 1119 	mov	a,r1
+   010D F0                 1120 	movx	@dptr,a
+                    010E   1121 	C$iconv.c$114$2$2 ==.
+                           1122 ;	C:/SDCC/GPSMon/dev/iconv.c:114: if( value == 0 )
+                           1123 ;	genIfx
+   010E EA                 1124 	mov	a,r2
+   010F 4B                 1125 	orl	a,r3
+                           1126 ;	genIfxJump
+                           1127 ;	Peephole 108.c	removed ljmp by inverse jump logic
+   0110 60 03              1128 	jz	00106$
+                           1129 ;	Peephole 300	removed redundant label 00130$
+                    0112   1130 	C$iconv.c$109$1$1 ==.
+                           1131 ;	C:/SDCC/GPSMon/dev/iconv.c:109: for( ; ndx>=0; ndx-- ){
+                           1132 ;	genMinus
+                           1133 ;	genMinusDec
+   0112 1E                 1134 	dec	r6
+                           1135 ;	Peephole 112.b	changed ljmp to sjmp
+   0113 80 99              1136 	sjmp	00103$
+   0115                    1137 00106$:
+                    0115   1138 	C$iconv.c$117$1$1 ==.
+                           1139 ;	C:/SDCC/GPSMon/dev/iconv.c:117: if( value > 0 ){
+                           1140 ;	genIfx
+   0115 EA                 1141 	mov	a,r2
+   0116 4B                 1142 	orl	a,r3
+                           1143 ;	genIfxJump
+                           1144 ;	Peephole 108.c	removed ljmp by inverse jump logic
+   0117 60 1B              1145 	jz	00108$
+                           1146 ;	Peephole 300	removed redundant label 00131$
+                    0119   1147 	C$iconv.c$119$2$3 ==.
+                           1148 ;	C:/SDCC/GPSMon/dev/iconv.c:119: for( ndx=nbdigits-1; ndx>=0; --ndx )
+                           1149 ;	genMinus
+                           1150 ;	genMinusDec
+   0119 E5*05              1151 	mov	a,_UnsignedToAscii_PARM_3
+   011B 14                 1152 	dec	a
+   011C FD                 1153 	mov	r5,a
+                           1154 ;	genAssign
+   011D 8D 02              1155 	mov	ar2,r5
+   011F                    1156 00112$:
+                           1157 ;	genCmpLt
+                           1158 ;	genCmp
+   011F EA                 1159 	mov	a,r2
+                           1160 ;	genIfxJump
+                           1161 ;	Peephole 108.e	removed ljmp by inverse jump logic
+   0120 20 E7 10           1162 	jb	acc.7,00115$
+                           1163 ;	Peephole 300	removed redundant label 00132$
+                    0123   1164 	C$iconv.c$120$2$3 ==.
+                           1165 ;	C:/SDCC/GPSMon/dev/iconv.c:120: *(pbuf+ndx) = '?';
+                           1166 ;	genPlus
+                           1167 ;	Peephole 236.g	used r2 instead of ar2
+   0123 EA                 1168 	mov	a,r2
+   0124 25*03              1169 	add	a,_UnsignedToAscii_PARM_2
+   0126 F5 82              1170 	mov	dpl,a
+                           1171 ;	Peephole 181	changed mov to clr
+   0128 E4                 1172 	clr	a
+   0129 35*04              1173 	addc	a,(_UnsignedToAscii_PARM_2 + 1)
+   012B F5 83              1174 	mov	dph,a
+                           1175 ;	genPointerSet
+                           1176 ;     genFarPointerSet
+   012D 74 3F              1177 	mov	a,#0x3F
+   012F F0                 1178 	movx	@dptr,a
+                    0130   1179 	C$iconv.c$119$2$3 ==.
+                           1180 ;	C:/SDCC/GPSMon/dev/iconv.c:119: for( ndx=nbdigits-1; ndx>=0; --ndx )
+                           1181 ;	genMinus
+                           1182 ;	genMinusDec
+   0130 1A                 1183 	dec	r2
+                           1184 ;	Peephole 112.b	changed ljmp to sjmp
+   0131 80 EC              1185 	sjmp	00112$
+   0133                    1186 00115$:
+                    0133   1187 	C$iconv.c$121$2$3 ==.
+                           1188 ;	C:/SDCC/GPSMon/dev/iconv.c:121: return;
+                           1189 ;	genRet
+                           1190 ;	Peephole 112.b	changed ljmp to sjmp
+                           1191 ;	Peephole 251.b	replaced sjmp to ret with ret
+   0133 22                 1192 	ret
+   0134                    1193 00108$:
+                    0134   1194 	C$iconv.c$125$1$1 ==.
+                           1195 ;	C:/SDCC/GPSMon/dev/iconv.c:125: ndx--;
+                           1196 ;	genMinus
+                           1197 ;	genMinusDec
+   0134 EE                 1198 	mov	a,r6
+   0135 14                 1199 	dec	a
+   0136 FD                 1200 	mov	r5,a
+                    0137   1201 	C$iconv.c$126$1$1 ==.
+                           1202 ;	C:/SDCC/GPSMon/dev/iconv.c:126: while( ndx >= 0 )
+                           1203 ;	genAssign
+   0137 8D 02              1204 	mov	ar2,r5
+   0139                    1205 00109$:
+                           1206 ;	genCmpLt
+                           1207 ;	genCmp
+   0139 EA                 1208 	mov	a,r2
+                           1209 ;	genIfxJump
+                           1210 ;	Peephole 108.e	removed ljmp by inverse jump logic
+   013A 20 E7 12           1211 	jb	acc.7,00116$
+                           1212 ;	Peephole 300	removed redundant label 00133$
+                    013D   1213 	C$iconv.c$127$1$1 ==.
+                           1214 ;	C:/SDCC/GPSMon/dev/iconv.c:127: *(pbuf+ndx--) = ' ';
+                           1215 ;	genAssign
+   013D 8A 03              1216 	mov	ar3,r2
+                           1217 ;	genMinus
+                           1218 ;	genMinusDec
+   013F 1A                 1219 	dec	r2
+                           1220 ;	genPlus
+                           1221 ;	Peephole 236.g	used r3 instead of ar3
+   0140 EB                 1222 	mov	a,r3
+   0141 25*03              1223 	add	a,_UnsignedToAscii_PARM_2
+   0143 F5 82              1224 	mov	dpl,a
+                           1225 ;	Peephole 181	changed mov to clr
+   0145 E4                 1226 	clr	a
+   0146 35*04              1227 	addc	a,(_UnsignedToAscii_PARM_2 + 1)
+   0148 F5 83              1228 	mov	dph,a
+                           1229 ;	genPointerSet
+                           1230 ;     genFarPointerSet
+   014A 74 20              1231 	mov	a,#0x20
+   014C F0                 1232 	movx	@dptr,a
+                           1233 ;	Peephole 112.b	changed ljmp to sjmp
+   014D 80 EA              1234 	sjmp	00109$
+   014F                    1235 00116$:
+                    014F   1236 	C$iconv.c$129$1$1 ==.
+                    014F   1237 	XG$UnsignedToAscii$0$0 ==.
+   014F 22                 1238 	ret
+                           1239 	.area CSEG    (CODE)
+                           1240 	.area CONST   (CODE)
+                           1241 	.area XINIT   (CODE)

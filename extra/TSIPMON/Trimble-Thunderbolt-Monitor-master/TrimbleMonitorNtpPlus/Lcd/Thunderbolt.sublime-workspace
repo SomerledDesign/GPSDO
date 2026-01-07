@@ -1,0 +1,704 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"en",
+				"endl"
+			],
+			[
+				"in",
+				"inc\t#include <…>"
+			],
+			[
+				"Get",
+				"GetLength"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"buff",
+				"Buffer"
+			],
+			[
+				"Copy",
+				"CopySource"
+			],
+			[
+				"bu",
+				"Buffer"
+			],
+			[
+				"In",
+				"InitialInput"
+			],
+			[
+				"Fir",
+				"FirstMan"
+			],
+			[
+				"S",
+				"SetName"
+			],
+			[
+				"Hum",
+				"Human"
+			],
+			[
+				"i",
+				"instance"
+			],
+			[
+				"Huma",
+				"HumanName"
+			],
+			[
+				"First",
+				"FirstMan"
+			],
+			[
+				"Set",
+				"SetAge"
+			],
+			[
+				"c",
+				"cout\tcout"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"p",
+				"pTemperature"
+			],
+			[
+				"m",
+				"MyNumbers"
+			],
+			[
+				"co",
+				"cout\tcout"
+			],
+			[
+				"do",
+				"double"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			],
+			[
+				"N",
+				"Num2"
+			],
+			[
+				"Nu",
+				"Num1"
+			],
+			[
+				"LIGH",
+				"LIGHT_GREEN"
+			],
+			[
+				"LIG",
+				"LIGHT_PURPLE"
+			],
+			[
+				"LIGHT",
+				"LIGHT_PURPLE"
+			],
+			[
+				"B",
+				"BLUE"
+			],
+			[
+				"LI",
+				"LIGHT_GRAY"
+			],
+			[
+				"NO",
+				"NO_COLOUR"
+			],
+			[
+				"Num",
+				"Num1"
+			],
+			[
+				"pro",
+				"prompt_command"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Thunderbolt/src/Thunderbolt.cpp",
+			"settings":
+			{
+				"buffer_size": 21302,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					""
+				],
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					""
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"All Syntaxes"
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"Performance"
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"Regex Compatibility"
+				]
+			],
+			[
+				"Packages/Default/Syntax Tests.sublime-build",
+				"All Syntaxes"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				"Clean"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 266.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"clang",
+				"Clang Format: Select Style"
+			],
+			[
+				"As",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"ycmd",
+				"Ycmd: Create HMAC keys"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"y",
+				"Ycmd: Create HMAC keys"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"packr",
+				"Package Control: Remove Package"
+			],
+			[
+				"gist",
+				"Gist: Create Private Gist"
+			],
+			[
+				"fe",
+				"Fetch: File"
+			],
+			[
+				"packis",
+				"Package Control: Install Package"
+			],
+			[
+				"packin",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp",
+				"Snippet: Typedef"
+			],
+			[
+				"pli",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"pacup",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"xik",
+				"Create Xiki Buffer"
+			],
+			[
+				"toggle min",
+				"View: Toggle Minimap"
+			],
+			[
+				"kb",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"javaS",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax Pasc",
+				"Set Syntax: Pascal"
+			],
+			[
+				"synt ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pack remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Thunderbolt",
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Thunderbolt/src"
+	],
+	"file_history":
+	[
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Trimble-Thunderbolt-Monitor-master/TrimbleMonitorNtpPlus/Lcd/Thunderbolt.sublime-project",
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Thunderbolt/src/gpstype.cpp",
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Thunderbolt/src/Thunderbolt.cpp",
+		"/Volumes/Murray/Users/kmurphy/.bash_profile",
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/Futaba or Noritaki VFD Arduino Files/IeeFlipNoFrills/IeeFlipNoFrills.h",
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/FutabaSD08FA/doxyfile",
+		"/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIP.sublime-project",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/CPrime.c",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/CppPrime.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/CppPrime",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/HexViewer/Default (OSX).sublime-keymap",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/test.cpp",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/8.12.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/6.7.cpp",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/C++Tuts.sublime-project",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/9.12.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/10.1.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/Lessons/9.12.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/9.9.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/9.10.cpp",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Installed Packages/C++ Starting Kit.sublime-package",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/.bashrc",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/C++.sublime-build",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/9.13.cpp",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/arduino-cli.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/AdvancedNewFile/Default (OSX).sublime-keymap",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/YcmdCompletion.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/YcmdCompletion/YcmdCompletion.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/EasyClangComplete.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/EasyClangComplete/EasyClangComplete.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/README.md",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/8.11a.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/8.11.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/9.4.cpp",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/snippets/cpp/Method.sublime-snippet",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/snippets/cpp/9.4.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/9.3.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/9.2.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/9.1.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/9.1.test.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/6.6.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/oop_Start.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/8.13.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/8.15.cpp",
+		"/Volumes/Murray/Users/kmurphy/C++Tutorial/Lessons/8.16.cpp",
+		"/Volumes/Murray/Users/kmurphy/8.13.cpp",
+		"/Volumes/Murray/Users/kmurphy/Library/Application Support/Sublime Text 3/Packages/User/snippets/cpp/cout.sublime-snippet"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"uint8_t",
+			"”",
+			"“",
+			"”",
+			"“",
+			"”",
+			"“",
+			"”",
+			"“",
+			"snippets",
+			"Command palette",
+			"scselect",
+			"$NC",
+			"}",
+			"New",
+			"}",
+			",",
+			"\\\"",
+			"\\\".+\\\"",
+			"(=\\d\\d;\\d\\d:)",
+			"zip",
+			"(\\*\\.[a-z]{2,4})",
+			"TimerStart",
+			"theThe",
+			"the",
+			"ifndef",
+			"IsTimerRunning",
+			"\\s\\s",
+			"^$",
+			"\\s\\s",
+			"0b([10]{7},)",
+			"0b([10]{6},)",
+			"0b([10]{5},)",
+			"0b([10]{1},)",
+			"0b([10]{2},)",
+			"0b([10]{3},)",
+			"0b([10]{4},)",
+			"0x",
+			"0x0,",
+			"0x",
+			",\n",
+			"0x",
+			",\n",
+			"0x",
+			"*/ ",
+			", ",
+			",",
+			", ",
+			"\\,.",
+			",\n",
+			", ",
+			",  ",
+			", ",
+			"\\,.",
+			"\\,",
+			"\\s",
+			"/(\\s)\\g",
+			"/(\\s)",
+			"href",
+			"grep"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			" ",
+			"",
+			"$1\\n",
+			"  ",
+			",",
+			"0b0$1",
+			"0b00$1",
+			"0b0000000$1",
+			"0b000000$1",
+			"0b00000$1",
+			"0b0000$1",
+			"0b",
+			"0x00000000,",
+			"\\,\\\\r",
+			"\\,^p"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Thunderbolt/src/Thunderbolt.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/SublimeLinter/hackboard (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".cpp",
+								"current_syntax": "C++/C++",
+								"enabled": false,
+								"last_updated": 1493666038.19
+							},
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 101.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 177.0
+	},
+	"pinned_build_system": "Packages/User/C++.sublime-build",
+	"project": "Thunderbolt.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/snippets/cpp/Method.sublime-snippet"
+			],
+			[
+				"gpscd",
+				"GPSMon.cdb"
+			],
+			[
+				"tsip",
+				"TSIPMon.c"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Library/Scripts/shell-scripts/shell-scripts.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 291.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

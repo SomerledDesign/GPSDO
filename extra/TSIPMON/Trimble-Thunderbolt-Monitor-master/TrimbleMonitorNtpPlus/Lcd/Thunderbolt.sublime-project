@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Volumes/Murray/Users/kmurphy/Desktop/Doing/GPSDO/TSIPMON/Thunderbolt",
+			"name": "Thunderbolt",
+			// "file_exclude_patterns": ["*.css","*.xml","*.js","*.png","*.html"]
+		},
+		{
+			"folder_exclude_patterns":
+			[
+				".vscode"
+			]
+		}
+	]
+}
