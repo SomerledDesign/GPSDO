@@ -25,7 +25,7 @@ pio run
 Default environment is `wemos_d1_mini32` (see `platformio.ini`).
 
 ## Configuration
-Create `src/secrets.h` (ignored by git) with your WiFi credentials and hostname:
+Create `include/secrets.h` (ignored by git) with your WiFi credentials and hostname:
 ```cpp
 const char ssid[] = "YOUR_SSID";
 const char password[] = "YOUR_PASSWORD";
