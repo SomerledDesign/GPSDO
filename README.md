@@ -13,9 +13,7 @@ serves NTP on the LAN, and shows status on the VFD.
 - Boot message includes software version
 
 ## GPS Week Rollover Fix
-Older GPS week-number rollovers can cause the date to jump backward. We avoid that by using the
-Thunderbolt's full date/time fields (from the primary timing packet) and converting to Unix/NTP
-time on the ESP32. No 10-bit week math is used on the MCU, so the rollover does not break time.
+Older GPS week-number rollovers can cause the date to jump backward. We avoid that by using the Thunderbolt's full date/time fields (from the primary timing packet) and converting to Unix/NTP time on the ESP32. No 10-bit week math is used on the MCU, so the rollover does not break time.
 
 ## Build
 ```sh

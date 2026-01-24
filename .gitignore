@@ -20,3 +20,6 @@ extra/TSIPMON/
 
 # macOS breadcrumbs
 .DS_Store
+
+# Windows breadcrumbs
+desktop.ini

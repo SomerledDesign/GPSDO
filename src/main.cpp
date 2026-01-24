@@ -1,29 +1,29 @@
-// Pinout wiring Wemos D1 mini32
-//  Notes: Pin/Function/IDE Pin Number | IDE Pin Number, Function/Pin
+// Pinout wiring MH-ET Live D1 Minikit
+//  Notes: Pin/Function/Physical Pin Number | Physical Pin Number, Function/Pin
 //           o  normal pin
 //          (o) Pin is in white silkscreen
-//          ~   PWM/I2C/1 Wire Pin,
-//          x = Pin is being used.
-//
-//                                           /------------------------------------------------\
-//                                          /  Wemos D1 mini32 (top view, USB at bottom)       \
-//                                         /                                                    \
-//                 GND | RST               |  GND o  | (o)  RST               IO1  (o) |  o GND  |     TXD:0  | GND     
-//                 N/C | SVP/ADC           |  N/C o  | (o)  A0                IO3  (o) |  x IO27 |     RXD:0  | ===VFD D4===  
-//     ADC3/SVN/GPIO39 | ===VFD D3===      | IO39 o  | (x)  IO26              IO22~(o) |  x IO25 |     D1/SCL | ===VFD D2===  
-//         ADC1/GPIO35 | D5/GPIO18/ SCK:0  | IO35 o  | (o)  IO18              IO21~(o) |  x IO32 |     D2/SDA | ===VFD D0===  
-//       ===VFD D1===  | D6/GPIO19/MISO:0  | IO33 x  | (o)  IO19              IO17 (o) |  x IO12 |  D3/GPIO17 | ===VFD D6===  
-//         ADC0/GPIO34 | D7/GPIO23/MOSI:0  | IO34 o  | (o)  IO23              IO16 (o) |  x~IO04 |  D4/GPIO16 | ===VFD WR===  
-//       ===VFD D5===  | D8/GPIO5 /  CS:0  | IO14 x  | (o)  IO5               GND  (o) |  o~IO0  |        GND | PWM0:1  
-//                 N/C | 3v3               |  N/C o  | (o)  3v3               Vcc  (o) |  o~IO2  |        VCC | PWM0:0  
-//     TXD:1/SD2/GPIO9 | ===VFD D7===      | IO9  o  |  X   IO13              IO15  o  |  o IO8  |        TD0 | CLK     
-//          CMD/GPIO11 | GPIO10/SD3/RXD:1  | IO11 o  |  O   IO10              IO7   o  |  o IO6  |        SD0 | SD1     
-//                                         |                                                     |
-//                                         |_                                                    |
-//                                           |_                                                  |
-//                                           ⍧ | RST               | USB |                       |
-//                                           |-                    |     |                       |
-//                                           +--------------------^+-----+^----------------------+
+//          ~   PWM/I2C/1 Wire Pin,    
+//          x = Pin is being used.    
+//    
+//                                               /------------------------------------------------\
+//                                              /  Wemos D1 mini32 (top view, USB at bottom)       \
+//                                             /                                                    \
+//                 GND  1|2   RST              |  GND o  | (o)  RST               IO1  (o) |  o GND  |        TXD:0  21|22 GND     
+//                 N/C   |   SVP/ADC           |  N/C o  | (o)  A0                IO3  (o) |  x IO27 |        RXD:0    |24 ===VFD D4===  
+//     ADC3/SVN/GPIO39   |6  ===VFD D3===      | IO39 o  | (x)  IO26              IO22~(o) |  x IO25 |        D1/SCL   |26 ===VFD D2===  
+//         ADC1/GPIO35   |   D5/GPIO18/ SCK:0  | IO35 o  | (o)  IO18              IO21~(o) |  x IO32 |        D2/SDA   |28 ===VFD D0===  
+//       ===VFD D1===   9|   D6/GPIO19/MISO:0  | IO33 x  | (o)  IO19              IO17 (x) |  x IO12 |  TBOLT_TX_PIN 29|30 ===VFD D6===  
+//         ADC0/GPIO34   |   D7/GPIO23/MOSI:0  | IO34 o  | (o)  IO23              IO16 (x) |  x~IO4  |  TBOLT_RX_PIN 31|32 ===VFD WS===  
+//       ===VFD D5===  13|   D8/GPIO5 /  CS:0  | IO14 x  | (o)  IO5               GND  (o) |  o~IO0  |           GND   |   PWM0:1  
+//                 N/C   |   3v3               |  N/C o  | (o)  3v3               Vcc  (o) |  o~IO2  |           VCC   |   PWM0:0  
+//     TXD:1/SD2/GPIO9   |18 ===VFD D7===      | IO9  o  |  X   IO13              IO15  o  |  o IO8  |           TD0   |   CLK     
+//          CMD/GPIO11 19|20 GPIO10/SD3/RXD:1  | IO11 o  |  O   IO10              IO7   o  |  o IO6  |           SD0 39|40 SD1     
+//                                             |                                                     |
+//                                             |_                                                    |
+//                                               |_                                                  |
+//                                              O--| RST               | USB |                       |
+//                                               |-                    |     |                       |
+//                                               +--------------------^+-----+^----------------------+
 // Update these pins to match your wiring.
 
 #include <Arduino.h>
@@ -55,15 +55,15 @@ constexpr uint32_t TBOLT_BAUD = TSIP_BAUD_RATE;
 
 // Futaba NA202SD08FA parallel interface pins (20x2 VFD)
 // Update these to the GPIOs you actually wire.
-constexpr uint8_t VFD_STROBE = 4;
-constexpr uint8_t VFD_D0 = 32;
-constexpr uint8_t VFD_D1 = 33;
-constexpr uint8_t VFD_D2 = 25;
-constexpr uint8_t VFD_D3 = 26;
-constexpr uint8_t VFD_D4 = 27;
-constexpr uint8_t VFD_D5 = 14;
-constexpr uint8_t VFD_D6 = 12;
-constexpr uint8_t VFD_D7 = 13;
+constexpr uint8_t VFD_STROBE = 4;  // [IO4]
+constexpr uint8_t VFD_D0 = 32;     // [IO32]
+constexpr uint8_t VFD_D1 = 33;     // [IO33]
+constexpr uint8_t VFD_D2 = 25;     // [IO25]
+constexpr uint8_t VFD_D3 = 26;     // [IO26]
+constexpr uint8_t VFD_D4 = 27;     // [IO27]
+constexpr uint8_t VFD_D5 = 14;     // [IO14]
+constexpr uint8_t VFD_D6 = 12;     // [IO12]
+constexpr uint8_t VFD_D7 = 13;     // [IO13]
 
 constexpr uint8_t DISPLAY_COLUMNS = 20;
 constexpr uint8_t DISPLAY_ROWS = 2;
@@ -73,6 +73,7 @@ constexpr uint32_t STATUS_HOLD_MS = 10000;
 constexpr uint32_t SLEEP_SWAP_MS = 30000;
 constexpr uint32_t SLEEP_IP_INTERVAL_MS = 120000;
 constexpr uint32_t SLEEP_IP_DURATION_MS = 14500;
+constexpr uint32_t TBOLT_DETECT_TIMEOUT_MS = 1500;
 constexpr bool DATE_FORMAT_MDY = true;
 constexpr bool CLOCK_UPDATE_WINDOW_ENABLED = true;
 constexpr int16_t TIMEZONE_OFFSET_MINUTES = 0;          // local = UTC + offset
@@ -136,6 +137,17 @@ bool hasStatusSnapshot = false;
 // --------------------------------------------------------------------------------------
 // Helpers
 // --------------------------------------------------------------------------------------
+
+bool waitForThunderboltData(uint32_t timeoutMs) {
+  const uint32_t start = millis();
+  while (millis() - start < timeoutMs) {
+    if (thunderboltSerial.available() > 0) {
+      return true;
+    }
+    delay(10);
+  }
+  return false;
+}
 
 void showBootMessage(const char *msg) {
   char line[DISPLAY_COLUMNS + 1] = {0};
@@ -486,7 +498,9 @@ void setup() {
 
   thunderboltSerial.begin(TBOLT_BAUD, SERIAL_8N1, TBOLT_RX_PIN, TBOLT_TX_PIN);
   thunderbolt.registerFallback(rtcFallback);
-  thunderbolt.setPacketBroadcastMask(PBM_PRIMARY_TIMING_INFO | PBM_SUPPLEMENTAL_TIMING_INFO);
+  if (waitForThunderboltData(TBOLT_DETECT_TIMEOUT_MS)) {
+    thunderbolt.setPacketBroadcastMask(PBM_PRIMARY_TIMING_INFO | PBM_SUPPLEMENTAL_TIMING_INFO);
+  }
 
   setupWifi();
   startMdns();

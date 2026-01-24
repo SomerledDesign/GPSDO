@@ -1,6 +1,0 @@
-<Project name="tbolt2lcd">
-	<File path="makefile"></File>
-	<File path="main.c"></File>
-	<File path="lcd.h"></File>
-	<File path="lcd.c"></File>
-</Project>

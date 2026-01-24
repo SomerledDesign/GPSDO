@@ -13,8 +13,8 @@
 
 ## Milestones (Recommended)
 1) NTP service discoverable on LAN with a configurable hostname (mDNS + DHCP hostname).
+  - Status report (serial & minimal HTTP in .data folder using SPLIFFS) for monitoring.
 2) NTP quality signaling: adjust stratum/leap indicator based on Thunderbolt lock/health.
-3) Optional status export (serial or minimal HTTP) for monitoring.
 
 ## Notes / Assumptions
 - ESP32 environment is `wemos_d1_mini32`.
